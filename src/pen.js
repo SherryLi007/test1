@@ -525,7 +525,7 @@
   };
 
   Pen.prototype.getContent = function() {
-    return trim(this.config.editor.innerHTML);
+    return this.isEmpty() ?  '' : trim(this.config.editor.innerHTML);
   };
 
   Pen.prototype.setContent = function(html) {
